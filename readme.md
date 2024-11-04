@@ -33,9 +33,10 @@
 - Creada la carpeta `js` con el `main.js` que controla los votos y el reset.
 - Implementamos `<canvas id="myChart" width="400" height="400"></canvas>` además de la llamada al js de charts.
 - Añadimos el contorno de Bootstrap y estilos a los botones.
+- OJO!! el botón de volver se encuentra abajo de la página, tras un 'hr'
 
 ## Ejercicio 9
-- Implementado, parece que funciona correctamente.
+- Implementado, funciona correctamente. Primero se realizó calculando los fps del monitor y ajustando la velocidad según dichos fps, pero no funcionaba adeacuadamente. Finalmente se ha realizado de la forma más "tradicional" posible, pero ha complicado mucho el botón de "Volver al inicio". Este botón es un javascript en la raiz del proyecto y es común para todas las páginas. En este caso el problema ha sido ubicarlo bajo el gato sin afectar al funcionamiento del mismo.
 
 ## Ejercicio 10
-- Revisado todo. Implementado el botón de back haciendo referencia al `index` (lo prefiero al `window.history.back()`).
+- Revisado todo. Implementado el botón de back ("Volver al inicio") para regresar al index del raiz. He probado con `window.history.back()` pero me daba problemas en los ejercicios de ocultar el texto.Posteriormente he decidido hacer un botón en una carpeta 'js' en la raiz del proyecto, y que todos los ejercicios tiren de dicho botón (document.addEventListener("DOMContentLoaded") .....). Ha sido un poco complicarme pero creo que ha merecido la pena en lo que respecta a unificar funcionalidad en un único punto (que lo mismo la he liado por mal funcionamiento y tenia que haber hecho algo más simple). Este html del ejercicio10 es el index.html que se usa para la navegación
